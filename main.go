@@ -1,8 +1,11 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/uadmin/uadmin"
 	"github.com/vincentroyce/payroll/models"
+	"github.com/vincentroyce/payroll/views"
 )
 
 func main() {
@@ -10,6 +13,6 @@ func main() {
 		models.Company{},
 		models.Employee{},
 	)
-
+	http.HandleFunc("/dashboard/", uadmin.Handler(views.MainHandler)) // Set the page you want to show first
 	uadmin.StartServer()
 }
