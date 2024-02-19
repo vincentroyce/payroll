@@ -33,18 +33,9 @@ func (Status) Trainee() int {
 	return 1
 }
 
-func (Status) Provi() int {
+func (Status) Probationary() int {
 	return 2
 }
-func (Status) Junior() int {
+func (Status) Regular() int {
 	return 3
-}
-func (Status) Senior() int {
-	return 4
-}
-func (Status) Manager() int {
-	return 5
-}
-func (Gender) Head() int {
-	return 6
 }
