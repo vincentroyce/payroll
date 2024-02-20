@@ -13,6 +13,6 @@ func main() {
 		models.Company{},
 		models.Employee{},
 	)
-	http.HandleFunc("/dashboard/", uadmin.Handler(views.MainHandler)) // Set the page you want to show first
+	http.HandleFunc("/system/", uadmin.Handler(views.MainHandler)) // Set the page you want to show first
 	uadmin.StartServer()
 }
