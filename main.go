@@ -13,7 +13,7 @@ func main() {
 		models.Company{},
 		models.Employee{},
 	)
-
+	uadmin.RootURL = "/admin/"
 	http.HandleFunc("/system/", uadmin.Handler(views.MainHandler)) // Set the page you want to show first
 
 	uadmin.StartServer()

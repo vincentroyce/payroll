@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <!-- The assigned name attribute is equivalent to r.PostFormValue in
+        Golang (e.g. r.PostFormValue("username") = "admin") -->
+        <input type="text" name="user" placeholder="Username"><br>
+        <input type="password" name="pass" placeholder="Password"><br>
+        {{if .ErrExists}}
+            <p>{{.Err}}</p>
+        {{end}}
+        <br><button type="submit">Login</button><br>
+      </form>
+</body>
+</html>
