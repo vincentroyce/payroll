@@ -25,6 +25,8 @@
   color: #ffffff
 }
 
+/* BASE  */
+
 .container {
   width: 100%;
   height: 100%;
@@ -33,13 +35,13 @@
 
 .aside-main {
   height: 100vh;
-  width: 20%;
+  width: 15%;
   display: flex;
   flex-direction: column;
 }
 
 .logo {
-  height: 25vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -56,12 +58,12 @@
   color: white;
 }
 
-.aside-menu > span {
+.aside-menu>span {
   padding-right: 8rem;
   font-size: 25px;
 }
 
-.aside-menu > ul {
+.aside-menu>ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -69,12 +71,12 @@
   gap: 20px;
 }
 
-.aside-menu > ul > li {
+.aside-menu>ul>li {
   font-size: 25px;
   cursor: pointer;
 }
 
-.aside-menu > ul > li:hover {
+.aside-menu>ul>li:hover {
   color: #FFC5BF;
 }
 
@@ -86,7 +88,7 @@
 }
 
 .nav-main {
-  height: 15vh;
+  height: 10vh;
   width: 100%;
   display: flex;
 }
@@ -107,18 +109,62 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 2rem;
+  padding-right: 4.5rem;
 }
 
-.nav-profile > p {
+.nav-profile>p {
   padding-right: 1rem;
 }
 
 .profile {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border: 1px solid white;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 10vh;
+  padding-right: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+}
+
+.mini-menu>ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mini-menu>ul>li {
+  cursor: pointer;
+}
+
+.mini-menu>ul>li:hover {
+  color: #E40813;
 }
 
 .wrapper2 {
@@ -126,35 +172,78 @@
   height: 100%;
 }
 
-.bold {
-  font-weight: 700;
-}
+/* BASE  */
+
+/* DASHBOARD */
 
 .dash-container {
-  border: solid 5px green;
   width: 100%;
   padding: 2rem;
-  height: 85vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
 
 .dash {
   width: 100%;
-  height: 100%;
+  height: 5%;
 }
 
 .dash-wrapper {
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
 
-.dash-wrapper > div {
+.dash-box1,
+.dash-box2,
+.dash-box3 {
   width: 100%;
   height: 100%;
-  border: red 1px solid;
+  display: flex;
+  padding: 1rem 5rem;
+  gap: 20px;
 }
 
+.dash-box1>div {
+  width: 100%;
+  height: 100%;
+  background-color: #E84434;
+  border-radius: 15px;
+}
+
+.dash-box2>div:first-child {
+  width: 75%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.dash-box2>div {
+  width: 25%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.dash-box3>div {
+  width: 100%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+/* DASHBOARD */
+
+/* EMPLOYEE LIST */
+
+/* EMPLOYEE LIST */
+
+/* TIME SHEET*/
+
+/* TIME SHEET*/
+
+/* PAYROLL*/
+
+/* PAYROLL*/
