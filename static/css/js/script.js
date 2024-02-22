@@ -1,6 +1,5 @@
 let profile = document.querySelector('.profile')
 let modal = document.querySelector('.modal')
-let error = document.getElementById('error');
 // let timeout = setTimeout(invalid, 3000);
 
 profile.addEventListener('click', () => {
@@ -16,4 +15,5 @@ window.onclick = function (e) {
 // function invalid() {
 //   error.style.display = 'none';
 // }
+
 

@@ -49,6 +49,11 @@
   align-items: center;
 }
 
+.logo > img {
+  width: 100%;
+  padding: 1rem;
+}
+
 .aside-menu {
   display: flex;
   justify-content: center;
@@ -305,12 +310,205 @@
 
 /* EMPLOYEE LIST */
 
+.emplist-container {
+  width: 100%;
+  padding: 2rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.emplist {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.emplist > input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.emplist-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.emplist-box1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  gap: 20px;
+}
+
+.emplist-table {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.table-head {
+  width: 10rem;
+  height: 20px;
+}
+
+.table-head > th {
+  width: 20%;
+  height: 20px;
+  border-bottom: solid 1px black;
+}
+
+.table-content {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.table-content > td {
+  width: 20%;
+  height: 20px;
+}
+
 /* EMPLOYEE LIST */
 
 /* TIME SHEET*/
 
+.ts-container {
+  width: 100%;
+  padding: 2rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ts>input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.ts-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-box1,
+.ts-box2,
+.ts-box3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1rem 5rem;
+  gap: 20px;
+}
+
+.ts-box1>div {
+  width: 100%;
+  height: 100%;
+  background-color: #E84434;
+  border-radius: 15px;
+}
+
+.ts-box2>div:first-child {
+  width: 75%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.ts-box2>div {
+  width: 25%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.ts-box3>div {
+  width: 100%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
 /* TIME SHEET*/
 
 /* PAYROLL*/
+
+.pr-container {
+  width: 100%;
+  padding: 2rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pr {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pr>input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.pr-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pr-box1,
+.pr-box2,
+.pr-box3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1rem 5rem;
+  gap: 20px;
+}
+
+.pr-box1>div {
+  width: 100%;
+  height: 100%;
+  background-color: #E84434;
+  border-radius: 15px;
+}
+
+.pr-box2>div:first-child {
+  width: 75%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.pr-box2>div {
+  width: 25%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
+
+.pr-box3>div {
+  width: 100%;
+  height: 100%;
+  background-color: #FFC5BF;
+  border-radius: 15px;
+}
 
 /* PAYROLL*/

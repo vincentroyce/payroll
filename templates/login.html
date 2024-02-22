@@ -22,10 +22,11 @@
                                     Golang (e.g. r.PostFormValue("username") = "admin") -->
                     <input type="text" name="user" placeholder="Enter Username">
                     <input type="password" name="pass" placeholder="Password">
+                  
                     {{if .ErrExists}}
                     <p id="error">{{.Err}}</p>
                     {{end}}
-                    <button type="submit">Login</button>
+                    <button class="btn" type="submit">Login</button>
                 </form>
             </div>
         </div>
