@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <form method="POST">
-        <!-- The assigned name attribute is equivalent to r.PostFormValue in
-        Golang (e.g. r.PostFormValue("username") = "admin") -->
-        <input type="text" name="user" placeholder="Username"><br>
-        <input type="password" name="pass" placeholder="Password"><br>
-        {{if .ErrExists}}
-            <p>{{.Err}}</p>
-        {{end}}
-        <br><button type="submit">Login</button><br>
-      </form>
+    <div class="login-container">
+        <div class="login-wrapper">
+            <div class="login-logo">
+                <img src="/static/assets/img/integritynet-logo.png">
+            </div>
+            <div class="login-form">
+                <form method="POST" class="login-box">
+                    <!-- The assigned name attribute is equivalent to r.PostFormValue in
+                                    Golang (e.g. r.PostFormValue("username") = "admin") -->
+                    <input type="text" name="user" placeholder="Enter Username">
+                    <input type="password" name="pass" placeholder="Password">
+                    {{if .ErrExists}}
+                    <p id="error">{{.Err}}</p>
+                    {{end}}
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
