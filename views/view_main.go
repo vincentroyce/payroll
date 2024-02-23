@@ -9,7 +9,7 @@ import (
 
 // MainHandler is the main handler for the login system.
 func MainHandler(w http.ResponseWriter, r *http.Request) { //needed prefix initialized from main.go
-	page := strings.TrimSuffix(r.URL.Path, "/")
+	page := strings.TrimPrefix(r.URL.Path, "/")
 	session := uadmin.IsAuthenticated(r)
 
 	if session == nil {
@@ -18,6 +18,7 @@ func MainHandler(w http.ResponseWriter, r *http.Request) { //needed prefix initi
 
 	c := map[string]interface{}{}
 	switch page {
+
 	case "dashboard": //Name of HTML
 		c = DashboardHandler(w, r)
 	case "payroll": //Name of HTML
@@ -29,7 +30,9 @@ func MainHandler(w http.ResponseWriter, r *http.Request) { //needed prefix initi
 	default:
 		page = "dashboard"
 	}
+	uadmin.Trail(uadmin.DEBUG, page)
 	c["Page"] = page
+	uadmin.Trail(uadmin.DEBUG, c)
 	// if r.URL.Path == "/logout" {
 	// 	/* If the request URL Path is /logout after the /login_system/, it will proceed to this part.
 	// 	e.g. localhost:8080/login_system/logout */
@@ -48,6 +51,6 @@ func Rendering(w http.ResponseWriter, r *http.Request, page string, context map[
 
 	path := "./templates/" + page + ".html"
 	templateList = append(templateList, path)
-	uadmin.Trail(uadmin.DEBUG, path)
+
 	uadmin.RenderMultiHTML(w, r, templateList, context)
 }
