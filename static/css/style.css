@@ -35,7 +35,7 @@
 
 .aside-main {
   height: 100vh;
-  width: 15%;
+  width: 13%;
   display: flex;
   flex-direction: column;
 }
@@ -45,7 +45,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: white solid 1px;
+  border-bottom: white dotted 1px;
   align-items: center;
 }
 
@@ -66,6 +66,7 @@
 .aside-menu>span {
   padding-right: 8rem;
   font-size: 25px;
+  font-weight: 600;
 }
 
 .aside-menu>ul {
@@ -73,21 +74,42 @@
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  gap: 20px;
+  gap: 40px;
+}
+
+/* .aside-menu>ul>li>img {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: -10px;
+  left: -2.3rem;
+} */
+
+.icon {
+  position: absolute;
+  font-size: 20px;
+  left: -25%;
+  color: white;
 }
 
 .aside-menu>ul>li {
-  font-size: 25px;
-  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .aside-menu>ul>li>a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .aside-menu>ul>li>a:hover {
   color: #FFC5BF;
+}
+
+.aside-menu>ul>li>a:hover .icon{
+  color: #c76156;
 }
 
 .wrapper1 {
@@ -111,6 +133,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 5px;
 }
 
 .nav-profile {
@@ -126,7 +149,7 @@
   padding-right: 1rem;
 }
 
-.profile {
+.profile > img {
   width: 3.5rem;
   height: 3.5rem;
   border: 1px solid white;
@@ -299,11 +322,16 @@
   padding: 5px;
 }
 
-.login-box > button {
+.btn {
   border-radius: 10px;
   height: 50px;
-  background-color: #FF7062;
+  /* background-color: #FF7062; */
+  background-color: #ee3740;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FF7062;
 }
 
 /* LOGIN */
@@ -323,6 +351,7 @@
   height: 5%;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .emplist > input {
@@ -343,12 +372,13 @@
   display: flex;
   padding: 1rem 1rem;
   gap: 20px;
+  overflow-y: scroll;
 }
 
 .emplist-table {
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  border-collapse: collapse;
 }
 
 .table-head {
@@ -370,7 +400,11 @@
 
 .table-content > td {
   width: 20%;
-  height: 20px;
+  height: 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0ee;
 }
 
 /* EMPLOYEE LIST */
@@ -404,42 +438,45 @@
   flex-direction: column;
 }
 
-.ts-box1,
-.ts-box2,
-.ts-box3 {
+.ts-box1 {
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 1rem 5rem;
+  padding: 1rem 1rem;
   gap: 20px;
+  overflow-y: scroll;
 }
 
-.ts-box1>div {
+.ts-table {
   width: 100%;
   height: 100%;
-  background-color: #E84434;
-  border-radius: 15px;
+  border-collapse: collapse;
 }
 
-.ts-box2>div:first-child {
-  width: 75%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
+.table-head {
+  width: 10rem;
+  height: 20px;
 }
 
-.ts-box2>div {
-  width: 25%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
+.table-head>th {
+  width: 20%;
+  height: 20px;
+  border-bottom: solid 1px black;
 }
 
-.ts-box3>div {
+.table-content {
   width: 100%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
+  height: 20px;
+  text-align: center;
+}
+
+.table-content>td {
+  width: 20%;
+  height: 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0ee;
 }
 
 /* TIME SHEET*/
