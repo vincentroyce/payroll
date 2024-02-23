@@ -14,8 +14,9 @@ func main() {
 		models.Employee{},
 	)
 	uadmin.RootURL = "/admin/"
-	http.HandleFunc("/", uadmin.Handler(views.MainHandler)) // Set the page you want to show first
+	http.HandleFunc("/", uadmin.Handler(views.MainHandler)) 
 	http.HandleFunc("/login/", uadmin.Handler(views.LoginHandler))
 	http.HandleFunc("/logout/", uadmin.Handler(views.LogoutHandler))
+
 	uadmin.StartServer()
 }
