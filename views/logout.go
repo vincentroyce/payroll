@@ -1,26 +1,26 @@
 package views
 
 import (
-    "net/http"
+	"net/http"
 
-    "github.com/uadmin/uadmin"
+	"github.com/uadmin/uadmin"
 )
 
 // LogoutHandler handles the logout process for the user.
-func LogoutHandler(w http.ResponseWriter, r *http.Request, session *uadmin.Session) {
-    // Log out the user.
-    uadmin.Logout(r)
+func LogoutHandler(w http.ResponseWriter, r *http.Request) {
+	// Log out the user.
+	uadmin.Logout(r)
 
-    // Expire all cookies on logout by setting MaxAge to be less than 0.
-    for _, cookie := range r.Cookies() {
-        c := &http.Cookie{
-            Name:   cookie.Name,
-            Value:  "",
-            Path:   "/",
-            MaxAge: -1,
-        }
+	// Expire all cookies on logout by setting MaxAge to be less than 0.
+	for _, cookie := range r.Cookies() {
+		c := &http.Cookie{
+			Name:   cookie.Name,
+			Value:  "",
+			Path:   "/",
+			MaxAge: -1,
+		}
 
-        http.SetCookie(w, c)
-    }
-    http.Redirect(w, r, "/system/login", http.StatusSeeOther)
+		http.SetCookie(w, c)
+	}
+	http.Redirect(w, r, "/login/", http.StatusSeeOther)
 }
