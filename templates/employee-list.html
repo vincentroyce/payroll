@@ -6,12 +6,12 @@
 <main class="emplist-container">
   <div class="emplist">
     <h1>Employee List</h1>
-    <button>Add</button>
-    <input>
+    <button id="add-employee">Add Employee</button>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Employee Name..">
   </div>
   <div class="emplist-wrapper">
     <div class="emplist-box1">
-      <table class="emplist-table">
+      <table class="emplist-table" id="employee-table">
         <tr class="table-head">
           <th><input class="selectAll"  type="checkbox"></th>
           <th>ID</th>
@@ -70,11 +70,11 @@
         </tr>
         <tr class="table-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
+          <td>000002</td>
+          <td>Liza Doe</td>
+          <td>Department of health</td>
+          <td>Assistant</td>
+          <td>0541785</td>
         </tr>
         <tr class="table-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
