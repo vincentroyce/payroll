@@ -14,6 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/time-sheet.css">
+  <link rel="stylesheet" href="/static/css/payroll.css">
+  <link rel="stylesheet" href="/static/css/employee-list.css">
   <script src="https://kit.fontawesome.com/2fcd02beee.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,11 +28,10 @@
         <img src="/static/assets/img/integritynet-logo.png">
       </div>
       <div class="aside-menu">
-        <!-- <span>Overview</span> -->
         <ul>
           <li><i class="fa-brands fa-slack icon"></i><a href="/dashboard">Dashboard</a></li>
           <li><i class="fa-solid fa-user-tie icon"></i></i><a href="/employee-list">Employee List</a></li>
-          <li><i class="fa-regular fa-stopwatch icon"></i><a href="/time-sheet">Time Sheet</a></li>
+          <li><i class="fa-solid fa-stopwatch icon"></i><a href="/time-sheet">Time Sheet</a></li>
           <li><i class="fa-solid fa-file-invoice-dollar icon"></i><a href="/payroll">Payroll</a></li>
         </ul>
       </div>
@@ -44,10 +46,10 @@
           <div class="profile">
             <img src="/static/assets/img/no-profile.png">
           </div>
+
           <div class="modal">
             <div class="modal-content">
-              <!-- <div class="menu-profile"></div>
-              <p>John Doe</p> -->
+
               <div class="mini-menu">
                 <ul>
                   <li class="edit-profile">Account Settings</li>
@@ -57,11 +59,12 @@
             </div>
 
             <div class="modal-content-edit">
-              <!-- <div class="menu-profile"></div>
-                          <p>John Doe</p> -->
               <div class="mini-menu-edit">
-                  <img src="/static/assets/img/no-profile.png">
-                  <input type="button" value="Change Profile">
+                  <label for="uploadFile">
+                    <img id="main-profile" src="/static/assets/img/no-profile.png">
+                    <span>Change Profile</span>
+                  </label>
+                  <input type="file" class="dpbtn" id="uploadFile" onchange="loadFile(event)">
                   <p>Account Information:</p>
                   <div class="menu-wrapper">
                     <div class="menu-box1">
@@ -71,12 +74,13 @@
                       <label>Repeat Password:</label>
                     </div>
                     <div class="menu-box2">
-                      <input type="text" id="username" value="John">
-                      <input type="password" id="oldPassword" value="password">
+                      <input type="text" id="username" value="John Doe">
+                      <input type="password" id="oldPassword" value="">
                       <input type="password" id="newPassword" value="">
                       <input type="password" id="repeatPassword" value="">
                     </div>
                   </div>
+                  <input type="button" value="SAVE">
               </div>
             </div>
 

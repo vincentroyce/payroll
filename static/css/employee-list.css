@@ -1,0 +1,98 @@
+/* EMPLOYEE LIST */
+
+.emplist-container {
+  width: 100%;
+  padding: 2rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.emplist {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emplist>input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.emplist-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.emplist-box1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.emplist-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.table-head {
+  width: 10rem;
+  height: 20px;
+}
+
+.table-head>th {
+  width: 20%;
+  height: 20px;
+  border-bottom: solid 1px black;
+}
+
+.table-content {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.table-content>td>img {
+  width: 30px;
+  height: 30px;
+}
+
+.table-content>td {
+  width: 20%;
+  height: 40px;
+}
+
+tr:nth-child(even).active {
+  background-color: #d3d3d3;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0ee;
+}
+
+th:last-child {
+  padding-right: 1rem;
+}
+
+td:last-child {
+  padding-right: 1rem;
+}
+
+.active {
+  background-color: #d3d3d3;
+}
+
+.emplist-table input {
+  height: 20px;
+  width: 20px;
+}
+
+/* EMPLOYEE LIST */

@@ -7,8 +7,6 @@ let tableContent = document.querySelectorAll('.table-content')
 let checkBox = document.querySelectorAll('.select')
 let checkAll = document.querySelector('.selectAll')
 
-let bgColor = '#fff0ee'
-
 profile.addEventListener('click', () => {
   modal.style.display = 'flex';
 })
@@ -30,14 +28,11 @@ window.onclick = function (e) {
   }
 }
 
-// checkBox.addEventListener('change', (event) => {
-//   if(event.target.checked){
-//     tableContent.style.backgroundColor = 'green';
-//   } else {
-//     tableContent.style.backgroundColor = 'white';
-//   }
-// })
 
+let loadFile = function (event) {
+  let picture = document.querySelector('#main-profile')
+  picture.src = URL.createObjectURL(event.target.files[0]);
+};
 
 
 checkBox.forEach((tabCont, index) => {
@@ -49,8 +44,6 @@ checkBox.forEach((tabCont, index) => {
 
   });
 });
-
-
 
 checkAll.addEventListener("click", () => {
   if (checkAll.checked){
@@ -69,32 +62,3 @@ checkAll.addEventListener("click", () => {
     })
   }
 })
-
-// function toggle(source) {
-//   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-//   for (var i = 0; i < checkboxes.length; i++) {
-//     if (checkboxes[i] != source)
-//       checkboxes[i].checked = source.checked;
-//   }
-// }
-
-
-// listContainer.addEventListener('change', function (event) {
-//   if (event.target.classList.contains('status')) {
-//     const li = event.target.parentElement;
-
-//     if (event.target.checked) {
-//       li.classList.remove('checked');
-//     } else {
-//       li.classList.add('checked');
-//     }
-//   }
-
-//   if (event.target.classList.contains('remove')) {
-//     const li = event.target.parentElement;
-
-//     if (event.target.checked) {
-//       li.remove();
-//     }
-//   }
-// });

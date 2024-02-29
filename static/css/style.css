@@ -222,6 +222,37 @@
   gap: 10px;
 }
 
+.mini-menu-edit > label {
+  position: relative;
+  text-align: center;
+  height: 5rem;
+  width: 5rem;
+}
+
+.mini-menu-edit > label > img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.mini-menu-edit > label > span {
+  font-size: 16px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  top: 1px;
+  right: 1px;
+  padding: 1.5rem 1rem;
+}
+
+.mini-menu-edit>label:hover span {
+  display: block;
+}
+
+.dpbtn {
+  display: none;
+}
+
 .menu-box2 {
   display: flex;
   flex-direction: column;
@@ -385,236 +416,3 @@
 
 /* LOGIN */
 
-/* EMPLOYEE LIST */
-
-.emplist-container {
-  width: 100%;
-  padding: 2rem;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.emplist {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.emplist > input {
-  width: 20rem;
-  height: 1.5rem;
-}
-
-.emplist-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.emplist-box1{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 1rem 1rem;
-  gap: 20px;
-  overflow-y: scroll;
-}
-
-.emplist-table {
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-}
-
-.table-head {
-  width: 10rem;
-  height: 20px;
-}
-
-.table-head > th {
-  width: 20%;
-  height: 20px;
-  border-bottom: solid 1px black;
-}
-
-.table-content {
-  width: 100%;
-  height: 20px;
-  text-align: center;
-}
-
-.table-content > td > img {
-  width: 30px;
-  height: 30px;
-}
-
-.table-content > td {
-  width: 20%;
-  height: 40px;
-}
-
-tr:nth-child(even).active {
-  background-color: #d3d3d3;
-}
-
-tr:nth-child(even) {
-  background-color: #fff0ee;
-}
-
-th:last-child {
-  padding-right: 1rem;
-}
-
-td:last-child {
-  padding-right: 1rem;
-}
-.active{
-  background-color: #d3d3d3; 
-}
-
-/* EMPLOYEE LIST */
-
-/* TIME SHEET*/
-
-.ts-container {
-  width: 100%;
-  padding: 2rem;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.ts {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ts>input {
-  width: 20rem;
-  height: 1.5rem;
-}
-
-.ts-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.ts-box1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 1rem 1rem;
-  gap: 20px;
-  overflow-y: scroll;
-}
-
-.ts-table {
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-}
-
-.table-head {
-  width: 10rem;
-  height: 20px;
-}
-
-.table-head>th {
-  width: 20%;
-  height: 20px;
-  border-bottom: solid 1px black;
-}
-
-.table-content {
-  width: 100%;
-  height: 20px;
-  text-align: center;
-}
-
-.table-content>td {
-  width: 20%;
-  height: 40px;
-}
-
-tr:nth-child(even) {
-  background-color: #fff0ee;
-}
-
-/* TIME SHEET*/
-
-/* PAYROLL*/
-
-.pr-container {
-  width: 100%;
-  padding: 2rem;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.pr {
-  width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.pr>input {
-  width: 20rem;
-  height: 1.5rem;
-}
-
-.pr-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.pr-box1,
-.pr-box2,
-.pr-box3 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 1rem 5rem;
-  gap: 20px;
-}
-
-.pr-box1>div {
-  width: 100%;
-  height: 100%;
-  background-color: #E84434;
-  border-radius: 15px;
-}
-
-.pr-box2>div:first-child {
-  width: 75%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
-}
-
-.pr-box2>div {
-  width: 25%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
-}
-
-.pr-box3>div {
-  width: 100%;
-  height: 100%;
-  background-color: #FFC5BF;
-  border-radius: 15px;
-}
-
-/* PAYROLL*/

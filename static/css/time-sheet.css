@@ -1,0 +1,71 @@
+/* TIME SHEET*/
+
+.ts-container {
+  width: 100%;
+  padding: 2rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ts>input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+.ts-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-box1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.ts-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.table-head {
+  width: 10rem;
+  height: 20px;
+}
+
+.table-head>th {
+  width: 20%;
+  height: 20px;
+  border-bottom: solid 1px black;
+}
+
+.table-content {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.table-content>td {
+  width: 20%;
+  height: 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0ee;
+}
+
+/* TIME SHEET*/
