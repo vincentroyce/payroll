@@ -1,7 +1,7 @@
 /* EMPLOYEE LIST */
 
-#myInput {
-  background-image: url("static/assets/img/search.png"); /* Add a search icon to input */
+#employeeList {
+  background-image: url('static/assets/img/search.png'); /* Add a search icon to input */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 30rem; /* Full-width */
   font-size: 16px; /* Increase font-size */
@@ -21,7 +21,7 @@
 #employee-table th, #employee-table td {
   text-align: left; /* Left-align text */
   padding: 12px; /* Add padding */
-}
+}s
 
 #employee-table tr {
   /* Add a bottom border to all table rows */
