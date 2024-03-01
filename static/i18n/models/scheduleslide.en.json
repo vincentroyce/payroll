@@ -1,0 +1,61 @@
+{
+  "display_name": "Schedule Slide",
+  "fields": {
+    "ApprovedByDepartment": {
+      "display_name": "Approved By Department",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ApprovedBySupervisor": {
+      "display_name": "Approved By Supervisor",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "FromDate": {
+      "display_name": "From Date",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ID": {
+      "display_name": "ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Name": {
+      "display_name": "Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "NewClockIn": {
+      "display_name": "New Clock In",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "NewClockout": {
+      "display_name": "New Clockout",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ToDate": {
+      "display_name": "To Date",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    }
+  }
+}

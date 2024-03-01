@@ -1,0 +1,47 @@
+{
+  "display_name": "Work Sites",
+  "fields": {
+    "ID": {
+      "display_name": "ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ManagedBby": {
+      "display_name": "Managed Bby",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ManagedBy": {
+      "display_name": "Managed By",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ManagedByID": {
+      "display_name": "Managed By ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Managedby": {
+      "display_name": "Managedby",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Worksite": {
+      "display_name": "Worksite",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    }
+  }
+}

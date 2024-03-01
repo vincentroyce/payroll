@@ -4,8 +4,7 @@ import "github.com/uadmin/uadmin"
 
 type Employee struct {
 	uadmin.Model
-	EmployeeNumber int `uadmin:"read_only"`
-	Name           string
+	Name string
 	//Position string
 	// Company
 	Gender        Gender
@@ -15,6 +14,11 @@ type Employee struct {
 	ContactNumber string
 	Email         string
 	Status        Status
+}
+
+func (s *Employee) Save() {
+	// business logic
+	uadmin.Save(s)
 }
 
 type Gender int

@@ -1,0 +1,33 @@
+{
+  "display_name": "Holiday",
+  "fields": {
+    "Hours": {
+      "display_name": "Hours",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "ID": {
+      "display_name": "ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Name": {
+      "display_name": "Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Rate": {
+      "display_name": "Rate",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    }
+  }
+}
