@@ -63,24 +63,56 @@ checkAll.addEventListener("click", () => {
   }
 })
 
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("employee-table");
-  tr = table.getElementsByTagName("tr");
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+let searchInput = document.querySelector('#employeeList');
+let tableRows = document.querySelector('#employee-table').querySelectorAll('.table-content')
+
+searchInput.addEventListener('input', (e) => {
+    let searchInputValue = e.target.value.toLowerCase();
+  tableRows.forEach(row => {
+    let doesRowMatch = row.textContent.toLowerCase().includes(searchInputValue);
+    if (doesRowMatch) {
+      row.style.display = 'table-row';
+    } else {
+      row.style.display = 'none';
     }
-  }
-}
+  })
+})
+
+
+// let search_Input = document.querySelector('#employeeTimesheet');
+// let table_Rows = document.querySelector('#timesheet').querySelectorAll('.table-content')
+
+// search_Input.addEventListener('input', (e) => {
+//     let searchInputValue1 = e.target.value.toLowerCase();
+//   tableRows1.forEach(row => {
+//     let doesRowMatch1 = row.textContent.toLowerCase().includes(searchInputValue1);
+//     if (doesRowMatch1) {
+//       row.style.display = 'table-row';
+//     } else {
+//       row.style.display = 'none';
+//     }
+//   })
+// })
+
+// function employeeList() {
+//   // Declare variables
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("employeeList");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("employee-table");
+//   tr = table.getElementsByTagName("tr");
+
+//   // Loop through all table rows, and hide those who don't match the search query
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[2];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//   }
+// }
