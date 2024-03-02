@@ -36,6 +36,13 @@
       "err_msg": {},
       "Choices": {}
     },
+    "FirstName": {
+      "display_name": "First Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "Gender": {
       "display_name": "Gender",
       "help": "",
@@ -50,8 +57,22 @@
       "err_msg": {},
       "Choices": {}
     },
+    "LastName": {
+      "display_name": "Last Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "Name": {
       "display_name": "Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Password": {
+      "display_name": "Password",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},
@@ -66,6 +87,13 @@
     },
     "Status": {
       "display_name": "Status",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Username": {
+      "display_name": "Username",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},

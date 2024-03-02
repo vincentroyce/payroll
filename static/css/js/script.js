@@ -6,9 +6,13 @@ let edit = document.querySelector('.edit-profile')
 let tableContent = document.querySelectorAll('.table-content')
 let checkBox = document.querySelectorAll('.select')
 let checkAll = document.querySelector('.selectAll')
+let closeBtnEdit = document.querySelector('#close-btn')
 
 profile.addEventListener('click', () => {
   modal.style.display = 'flex';
+  modalContent.style.display = 'flex'
+  modal.style.justifyContent = 'flex-end';
+  modal.style.alignItems = 'flex-start';
 })
 
 edit.addEventListener('click', () => {
@@ -16,6 +20,12 @@ edit.addEventListener('click', () => {
   modal.style.justifyContent = 'center';
   modal.style.alignItems = 'center';
   modalEdit.style.display = 'flex'
+})
+
+closeBtnEdit.addEventListener('click', () => {
+  modal.style.display = 'none';
+  modalContent.style.display = 'none';
+  modalEdit.style.display = 'none'
 })
 
 window.onclick = function (e) {
@@ -40,15 +50,15 @@ checkBox.forEach((tabCont, index) => {
     tableContent[index].classList.add("active");
   }
   tabCont.addEventListener("click", () => {
-      tableContent[index].classList.toggle("active");
+    tableContent[index].classList.toggle("active");
 
   });
 });
 
 checkAll.addEventListener("click", () => {
-  if (checkAll.checked){
+  if (checkAll.checked) {
     checkBox.forEach(v => {
-     v.checked = true;
+      v.checked = true;
     })
     tableContent.forEach(v => {
       v.classList.add("active");
