@@ -1,4 +1,25 @@
 /* TIME SHEET*/
+#employee-timesheet {
+  background-image: url("payroll/static/assets/img/search.png"); /* Add a search icon to input */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 30rem; /* Full-width */
+  height: 20px;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#timesheet {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  height: 30px;
+  font-size: 18px; /* Increase font-size */
+}
+
+#timesheet th, #timesheet td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
 
 .ts-container {
   width: 100%;
@@ -6,18 +27,14 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .ts {
   width: 100%;
-  height: 5%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
-}
-
-.ts>input {
-  width: 20rem;
-  height: 1.5rem;
 }
 
 .ts-wrapper {
@@ -36,36 +53,24 @@
   overflow-y: scroll;
 }
 
-.ts-table {
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-}
 
-.table-head {
-  width: 10rem;
-  height: 20px;
-}
-
-.table-head>th {
-  width: 20%;
-  height: 20px;
-  border-bottom: solid 1px black;
-}
-
-.table-content {
-  width: 100%;
-  height: 20px;
-  text-align: center;
-}
-
-.table-content>td {
-  width: 20%;
-  height: 40px;
+tr:nth-child(even).active {
+  background-color: #d3d3d3;
 }
 
 tr:nth-child(even) {
-  background-color: #fff0ee;
+  background-color: #fff6f6;
 }
 
+th:last-child {
+  padding-right: 1rem;
+}
+
+td:last-child {
+  padding-right: 1rem;
+}
+
+.active {
+  background-color: #d3d3d3;
+}
 /* TIME SHEET*/

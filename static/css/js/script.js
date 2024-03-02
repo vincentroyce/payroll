@@ -63,24 +63,88 @@ checkAll.addEventListener("click", () => {
   }
 })
 
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("employee-table");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+function employeeFunction() {
+  let input = document.getElementById('employeeList').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('employee-content');
+ 
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "";
     }
   }
 }
+
+// /* search bar for employee list */
+// let searchInput = document.querySelector('#employeeList');
+// let tableRows = document.querySelector('#employee-table').querySelectorAll('.table-content')
+
+// searchInput.addEventListener('input', (e) => {
+//     let searchInputValue = e.target.value.toLowerCase();
+//   tableRows.forEach(row => {
+//     let doesRowMatch = row.textContent.toLowerCase().includes(searchInputValue);
+//     if (doesRowMatch) {
+//       row.style.display = 'table-row';
+//     } else {
+//       row.style.display = 'none';
+//     }
+//   })
+// })
+
+function timesheetfunction() {
+  let input = document.getElementById('employee-timesheet').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('time-content');
+ 
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "";
+    }
+  }
+}
+
+// /* search bar for timesheet */
+// function myFunction() {
+//   // Declare variables
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("employee-timesheet");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("timesheet");
+//   tr = table.getElementsByTagName("tr");
+
+//   // Loop through all table rows, and hide those who don't match the search query
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[1];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//   }
+// }
+
+
+function payrollFunction() {
+  let input = document.getElementById('payroll').value
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('payroll-content');
+ 
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "";
+    }
+  }
+}
+
