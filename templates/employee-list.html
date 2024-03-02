@@ -7,7 +7,7 @@
   <div class="emplist">
     <h1>Employee List</h1>
     <button id="add-employee">Add Employee</button>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Employee Name..">
+    <input type="text" id="employeeList" onkeyup="employeeFunction()" placeholder="Search for Employee Name..">
   </div>
   <div class="emplist-wrapper">
     <div class="emplist-box1">
@@ -20,7 +20,7 @@
           <th>Position</th>
           <th>Contact</th>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select"   type="checkbox"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -28,7 +28,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select"  type="checkbox"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -36,7 +36,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -44,7 +44,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -52,7 +52,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -60,7 +60,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -68,7 +68,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000002</td>
           <td>Liza Doe</td>
@@ -76,7 +76,7 @@
           <td>Assistant</td>
           <td>0541785</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -84,7 +84,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -92,7 +92,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -100,7 +100,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -108,7 +108,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -116,7 +116,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -124,7 +124,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -132,7 +132,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -140,7 +140,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -148,7 +148,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -156,7 +156,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>
@@ -164,31 +164,7 @@
           <td>Manager</td>
           <td>1234567899</td>
         </tr>
-        <tr class="table-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="table-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="table-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="table-content">
+        <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>000001</td>
           <td>John Doe</td>

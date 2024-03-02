@@ -1,12 +1,11 @@
 /* EMPLOYEE LIST */
-
-#myInput {
-  background-image: url("static/assets/img/search.png"); /* Add a search icon to input */
+#employeeList {
+  background-image: url("payroll/static/assets/img/search.png"); /* Add a search icon to input */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 30rem; /* Full-width */
+  height: 20px;
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
 
@@ -14,7 +13,6 @@
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
   height: 70px;
-  border: 1px solid #ddd; /* Add a grey border */
   font-size: 18px; /* Increase font-size */
 }
 
@@ -23,27 +21,18 @@
   padding: 12px; /* Add padding */
 }
 
-#employee-table tr {
-  /* Add a bottom border to all table rows */
-  border-bottom: 1px solid #ddd;
-}
-
-#employee-table tr.table-head, #employee-table tr:hover {
-  /* Add a grey background color to the table header and on hover */
-  background-color: #e2dcdc;
-}
-
 .emplist-container {
   width: 100%;
   padding: 2rem;
   height: 90vh;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
 }
 
 .emplist {
   width: 100%;
-  height: 5%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -52,6 +41,7 @@
 #add-employee {
   padding: 2px;
   background-color: green;
+  height: 30px;
   margin-bottom: 12px;
   color: #ddd;
 }
@@ -70,6 +60,26 @@
   padding: 1rem 1rem;
   gap: 20px;
   overflow-y: scroll;
+}
+
+tr:nth-child(even).active {
+  background-color: #d3d3d3;
+}
+
+tr:nth-child(even) {
+  background-color: #fff6f6;
+}
+
+th:last-child {
+  padding-right: 1rem;
+}
+
+td:last-child {
+  padding-right: 1rem;
+}
+
+.active {
+  background-color: #d3d3d3;
 }
 
 

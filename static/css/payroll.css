@@ -1,4 +1,25 @@
 /* PAYROLL*/
+#payroll {
+  background-image: url("payroll/static/assets/img/search.png"); /* Add a search icon to input */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 30rem; /* Full-width */
+  height: 20px;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.pr-table {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  height: 70px;
+  font-size: 18px; /* Increase font-size */
+}
+
+.pr-table th, .pr-table td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
 
 .pr-container {
   width: 100%;
@@ -6,6 +27,7 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .pr {
@@ -13,11 +35,7 @@
   height: 5%;
   display: flex;
   justify-content: space-between;
-}
-
-.pr>input {
-  width: 20rem;
-  height: 1.5rem;
+  position: relative;
 }
 
 .pr-wrapper {
@@ -32,40 +50,12 @@
   height: 100%;
   display: flex;
   padding: 1rem 1rem;
-  gap: 20px;
+  gap: 50px;
   overflow-y: scroll;
 }
 
-.pr-table {
-  width: 100%;
-  height: 100%;
-  border-collapse: collapse;
-}
-
-.table-head {
-  width: 10rem;
-  height: 20px;
-}
-
-.table-head>th {
-  width: 20%;
-  height: 20px;
-  border-bottom: solid 1px black;
-}
-
-.table-content {
-  width: 100%;
-  height: 20px;
-  text-align: center;
-}
-
-.table-content>td {
-  width: 20%;
-  height: 40px;
-}
-
 tr:nth-child(even) {
-  background-color: #fff0ee;
+  background-color: #fff6f6;
 }
 
-/* PAYROLL */
+/* PAYROLL */ 
