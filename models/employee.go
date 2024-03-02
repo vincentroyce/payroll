@@ -4,7 +4,10 @@ import "github.com/uadmin/uadmin"
 
 type Employee struct {
 	uadmin.Model
-	Name string
+	FirstName string
+	LastName  string
+	Username  string
+	Password  string `uadmin:"password"`
 	//Position string
 	// Company
 	Gender        Gender
@@ -14,11 +17,6 @@ type Employee struct {
 	ContactNumber string
 	Email         string
 	Status        Status
-}
-
-func (s *Employee) Save() {
-	// business logic
-	uadmin.Save(s)
 }
 
 type Gender int
@@ -42,4 +40,16 @@ func (Status) Probationary() int {
 }
 func (Status) Regular() int {
 	return 3
+}
+
+func (e *Employee) Save() {
+	user := uadmin.User{}
+	user.Username = e.Username
+	user.FirstName = e.FirstName
+	user.LastName = e.LastName
+	user.Password = e.Password
+	user.Email = e.Username
+	user.Active = true
+	user.Save()
+	uadmin.Save(e)
 }
