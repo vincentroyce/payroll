@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary: #E40813;
+  --secondary: #FF7062;
+  --tertiary: #FFC5BF;
+  --primaryBG: linear-gradient(to bottom right, #000000, #414141);
+  --secondaryBG: #414141;
+  --tertiaryBG: #FFC5BF;
+}
+
+/* NOTE color, text, border, shadow, */
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-.primary-bg {
-  background-color: #000000;
-}
-
-.secondary-bg {
-  background-color: #414141;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 .primary {
@@ -38,6 +44,7 @@
   width: 13%;
   display: flex;
   flex-direction: column;
+  background-image: var(--primaryBG);
 }
 
 .logo {
@@ -92,6 +99,10 @@
   color: white;
 }
 
+.icon:hover{
+    color: #c76156;
+}
+
 .aside-menu>ul>li {
   position: relative;
   font-size: 16px;
@@ -109,7 +120,7 @@
 }
 
 .aside-menu>ul>li>a:hover .icon{
-  color: #c76156;
+  color: #e35f50;
 }
 
 .wrapper1 {
@@ -123,6 +134,7 @@
   height: 10vh;
   width: 100%;
   display: flex;
+  background-color: var(--secondaryBG);
 }
 
 .nav-user {
@@ -240,13 +252,15 @@
   position: absolute;
   display: none;
   z-index: 1;
-  top: 1px;
-  right: 1px;
+  top: 0;
+  right: 0;
   padding: 1.5rem 1rem;
 }
 
 .mini-menu-edit>label:hover span {
   display: block;
+  background-color: #4141412c;
+  border-radius: 50%;
 }
 
 .dpbtn {
@@ -280,6 +294,24 @@
   display: flex;
   gap: 5px;
   padding: 1rem;
+}
+
+.menu-wrapper2 {
+  display: flex;
+  justify-content: flex-end;
+  width: 22.5rem;
+  gap: 5px;
+  padding: 1rem;
+}
+
+#save-btn {
+  background-color: #92df92;
+  padding: 3px;
+  cursor: pointer;
+}
+
+#close-btn {
+  cursor: pointer;
 }
 
 .wrapper2 {

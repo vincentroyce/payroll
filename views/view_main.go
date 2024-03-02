@@ -27,6 +27,8 @@ func MainHandler(w http.ResponseWriter, r *http.Request) { //needed prefix initi
 		c = EmployeeListHandler(w, r)
 	case "time-sheet": // Name of HTML
 		c = TimesheetHandler(w, r)
+	case "elements": // Name of HTML
+		c = ElementHandler(w, r)
 	default:
 		page = "dashboard"
 	}
@@ -53,4 +55,10 @@ func Rendering(w http.ResponseWriter, r *http.Request, page string, context map[
 	templateList = append(templateList, path)
 
 	uadmin.RenderMultiHTML(w, r, templateList, context)
+}
+
+func ElementHandler(w http.ResponseWriter, r *http.Request) map[string]interface{} {
+	c := map[string]interface{}{}
+
+	return c
 }

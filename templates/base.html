@@ -8,11 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{.Title}}</title>
   {{ template "style" . }}
-  {{ template "title" . }}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/time-sheet.css">
   <link rel="stylesheet" href="/static/css/payroll.css">
@@ -23,23 +18,23 @@
 <body>
 
   <main class="container">
-    <aside class="aside-main primary-bg">
+    <aside class="aside-main">
       <div class="logo">
         <img src="/static/assets/img/integritynet-logo.png">
       </div>
       <div class="aside-menu">
         <ul>
-          <li><i class="fa-brands fa-slack icon"></i><a href="/dashboard">Dashboard</a></li>
-          <li><i class="fa-solid fa-user-tie icon"></i></i><a href="/employee-list">Employee List</a></li>
-          <li><i class="fa-solid fa-stopwatch icon"></i><a href="/time-sheet">Time Sheet</a></li>
-          <li><i class="fa-solid fa-file-invoice-dollar icon"></i><a href="/payroll">Payroll</a></li>
+          <li><a href="/dashboard"><i class="fa-brands fa-slack icon"></i>Dashboard</a></li>
+          <li><a href="/employee-list"><i class="fa-solid fa-user-tie icon"></i>Employee List</a></li>
+          <li><a href="/time-sheet"><i class="fa-solid fa-stopwatch icon"></i>Time Sheet</a></li>
+          <li><a href="/payroll"><i class="fa-solid fa-file-invoice-dollar icon"></i>Payroll</a></li>
         </ul>
       </div>
     </aside>
-    <section class="wrapper1">
-      <nav class="nav-main secondary-bg">
+    <div class="wrapper1">
+      <nav class="nav-main">
         <div class="nav-user tertiary">
-          <p>Welcome, John Doe</p>
+          <p>Welcome, Juan Dela Cruz</p>
           <p>01 January, 2024</p>
         </div>
         <div class="nav-profile">
@@ -74,23 +69,26 @@
                       <label>Repeat Password:</label>
                     </div>
                     <div class="menu-box2">
-                      <input type="text" id="username" value="John Doe">
+                      <input type="text" id="username" value="Juan Dela Cruz">
                       <input type="password" id="oldPassword" value="">
                       <input type="password" id="newPassword" value="">
                       <input type="password" id="repeatPassword" value="">
                     </div>
                   </div>
-                  <input type="button" value="SAVE">
+                  <div class="menu-wrapper2">
+                    <input type="button" id="save-btn" value="Save">
+                    <input type="button" id="close-btn" value="Close">
+                  </div>
               </div>
             </div>
 
           </div>
         </div>
       </nav>
-      <section class="wrapper2">
+      <div class="wrapper2">
         {{ template "content" . }}
-      </section>
-    </section>
+      </div>
+    </div>
   </main>
 
   {{ template "script" . }}
