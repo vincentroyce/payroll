@@ -1,7 +1,6 @@
 /* EMPLOYEE LIST */
 #employeeList {
-  background-image: url("payroll/static/assets/img/search.png"); /* Add a search icon to input */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-image: url('/static/assets/img/search.png');
   width: 30rem; /* Full-width */
   height: 20px;
   font-size: 16px; /* Increase font-size */
@@ -96,10 +95,13 @@ td:last-child {
 
 /* Modal Content/Box */
 .empModal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  background-image: url('/static/assets/img/integritynet-logo.png') ;
+  background-repeat: no-repeat;
+  background-color: #f6f6f6;
+  background-position: 50% 35px;
+  margin-left: 25%;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px  solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
 }
 
@@ -134,6 +136,7 @@ td:last-child {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  opacity: 0.5;
 }
 .empModal-form textarea {
   resize: vertical;
@@ -152,12 +155,48 @@ td:last-child {
 }
 
 #beif {
+
   text-align: center;
-  margin-bottom: 20px;
+  margin: 60px 0px 20px 0px;
 }
 
 #pi, #ji, #ECI {
   margin-bottom: 10px;
+}
+
+.tab {
+  display: none;
+}
+
+.step {
+  height: 20px;
+  width: 20px;
+  margin-left: 12rem;
+  padding: 5px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 10;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #ff0101;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 /* EMPLOYEE LIST */

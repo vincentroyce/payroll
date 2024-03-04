@@ -7,9 +7,9 @@
   <div class="emplist">
     <h1>Employee List</h1>  
     <button id="add-emp">Add Employee</button>
-
-    <input type="text" id="employeeList" onkeyup="employeeFunction()" placeholder="Search for Employee Name..">
-  
+      <div>
+        <input type="text" id="employeeList" onkeyup="employeeFunction()" placeholder="Search for Employee Name..">
+      </div>
   </div>
   <div class="emplist-wrapper">
     <div class="emplist-box1">
@@ -100,9 +100,18 @@
   <div id="empModal" class="modal">
     <!-- Modal content -->
     <div class="empModal-content">
+      <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="close">&times;</span>
+      <div class="tab">
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+        </div>
       <h1 id="beif">Basic Employment Information Form</h1>
       <h2 id="pi">Personal Information</h2>
-      <form action="#" method="post">
+      
+      <form id="regform" action="/action_page.php" method="post">
         <div class="empModal-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -143,6 +152,9 @@
           <label for="tin">Tin ID:</label>
           <input type="text" id="tin" name="tin" required>
         </div>
+      </div>
+      
+      <div class="tab">
       <h2 id="ji">Job Information</h2>
         <div class="empModal-form">
             <label for="department">Department:</label>
@@ -156,8 +168,7 @@
                 <option value="IT">IT</option>
                 <option value="Operations">Operations</option>
                 <option value="Software Development">Software Development</option> 
-                <option value="Tele">Tele</option>
-                               
+                <option value="Tele">Tele</option>                     
             </select>
         </div>
         <div class="empModal-form">
@@ -180,7 +191,9 @@
             <label for="startDate">Start Date:</label>
             <input type="date" id="startDate" name="startDate" required>
         </div>
-        
+      </div>
+      
+      <div class="tab">
       <h2 id="ECI">Emergency Contact Information</h2>
         <div class="empModal-form">
           <label for="contactname">Full Name:</label>
@@ -198,14 +211,19 @@
           <label for="relationship">Relationship</label>
           <input type="text" id="relationship" name="relationship" required>
         </div>
-
         <div class="empModal-form">
           <label for="notes">Notes:</label>
           <textarea id="notes" name="notes"></textarea>
         </div>
         <button type="submit" class="btn">Submit</button>
+        </div>
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+        </div>
     </form>
-      <span class="close">&times;</span>
     </div>
   </div>
 </main>
