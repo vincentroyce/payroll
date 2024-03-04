@@ -3,7 +3,7 @@ let modal = document.querySelector('.modal')
 let modalContent = document.querySelector('.modal-content')
 let modalEdit = document.querySelector('.modal-content-edit')
 let edit = document.querySelector('.edit-profile')
-let tableContent = document.querySelectorAll('.table-content')
+let tableContent = document.querySelectorAll('.employee-content')
 let checkBox = document.querySelectorAll('.select')
 let checkAll = document.querySelector('.selectAll')
 let closeBtnEdit = document.querySelector('#close-btn')
@@ -157,4 +157,3 @@ function payrollFunction() {
     }
   }
 }
-
