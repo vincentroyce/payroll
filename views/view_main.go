@@ -32,9 +32,9 @@ func MainHandler(w http.ResponseWriter, r *http.Request) { //needed prefix initi
 	default:
 		page = "dashboard"
 	}
-	uadmin.Trail(uadmin.DEBUG, page)
+	//uadmin.Trail(uadmin.DEBUG, page)
 	c["Page"] = page
-	uadmin.Trail(uadmin.DEBUG, c)
+	uadmin.Trail(uadmin.DEBUG, page)
 	// if r.URL.Path == "/logout" {
 	// 	/* If the request URL Path is /logout after the /login_system/, it will proceed to this part.
 	// 	e.g. localhost:8080/login_system/logout */

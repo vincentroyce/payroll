@@ -11,9 +11,10 @@ type Employee struct {
 	//Position string
 	// Company
 	Gender        Gender
-	Position      string
 	Company       Company
 	CompanyID     uint
+	Department    Department
+	DepartmentID  uint
 	ContactNumber string
 	Email         string
 	Status        Status
@@ -40,6 +41,10 @@ func (Status) Probationary() int {
 }
 func (Status) Regular() int {
 	return 3
+}
+
+func (s *Employee) String() string {
+	return s.LastName + " " + s.FirstName
 }
 
 func (e *Employee) Save() {

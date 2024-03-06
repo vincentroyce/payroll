@@ -18,82 +18,20 @@
           <th><input class="selectAll"  type="checkbox"></th>
           <th>ID</th>
           <th>Employee Name</th>
+          <th>Company</th>
           <th>Department</th>
-          <th>Position</th>
           <th>Contact</th>
         </tr>
-        <tr class="employee-content">
-          <td><input class="select"   type="checkbox"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select"  type="checkbox"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
+        {{range .Employee}}
         <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
+          <td>{{.ID}}</td>
+          <td>{{.LastName}}, {{.FirstName}}</td>
+          <td>{{.Company.Name}}</td>
+          <td>{{.Department.Name}}</td>
+          <td>{{.ContactNumber}}</td>
         </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000002</td>
-          <td>Liza Doe</td>
-          <td>Department of health</td>
-          <td>Assistant</td>
-          <td>0541785</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
-        <tr class="employee-content">
-          <td><input class="select" type="checkbox" value="Edit"></td>
-          <td>000001</td>
-          <td>John Doe</td>
-          <td>Department of Energy</td>
-          <td>Manager</td>
-          <td>1234567899</td>
-        </tr>
+        {{end}}
       </table>
     </div>
   </div>

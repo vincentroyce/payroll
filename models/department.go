@@ -4,9 +4,10 @@ import "github.com/uadmin/uadmin"
 
 type Department struct {
 	uadmin.Model
-	WorkSites   WorkSites
+	Name        string
+	WorkSite    string
 	WorkSitesID uint
-	Managedby   WorkSites
+	Managedby   string
 	ManagedbyID uint
 	// IsCostCenter string
 	// IsRevenueCenter string

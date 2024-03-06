@@ -23,7 +23,7 @@ func main() {
 		models.Overtime{},
 		models.ScheduleSlide{},
 		models.Timesheet{},
-		models.WorkSites{},
+		models.WorkSite{},
 	)
 	uadmin.RootURL = "/admin/"
 	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))

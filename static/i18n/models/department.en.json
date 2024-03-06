@@ -15,8 +15,29 @@
       "err_msg": {},
       "Choices": {}
     },
+    "Name": {
+      "display_name": "Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "WorkSite": {
+      "display_name": "Work Site",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "WorkSites": {
       "display_name": "Work Sites",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "WorkSitesID": {
+      "display_name": "Work Sites ID",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},
