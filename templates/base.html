@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/static/css/time-sheet.css">
   <link rel="stylesheet" href="/static/css/payroll.css">
   <link rel="stylesheet" href="/static/css/employee-list.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/2fcd02beee.js" crossorigin="anonymous"></script>
 </head>
 
@@ -34,7 +35,7 @@
     <div class="wrapper1">
       <nav class="nav-main">
         <div class="nav-user tertiary">
-          <p>Welcome, Juan Dela Cruz</p>
+          <p>Welcome, <span class="name"></span></p>
           <p>01 January, 2024</p>
         </div>
         <div class="nav-profile">
@@ -48,7 +49,7 @@
               <div class="mini-menu">
                 <ul>
                   <li class="edit-profile">Account Settings</li>
-                  <li><a href="/logout" type="button">Logout</a></li>
+                  <li><a class="logout" href="/logout" type="button">Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -96,7 +97,7 @@
   {{ define "style" }}{{ end }}
 
   {{ define "script" }}{{ end }}
-
+  <script src="/static/css/js/getuser.js"></script>
   <script src="/static/css/js/script.js"></script>
   <script src="/static/css/js/emp-modal.js"></script>
 </body>

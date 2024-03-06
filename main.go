@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/uadmin/uadmin"
+	"github.com/vincentroyce/payroll/api"
 	"github.com/vincentroyce/payroll/models"
 	"github.com/vincentroyce/payroll/views"
 )
@@ -25,6 +26,7 @@ func main() {
 		models.WorkSites{},
 	)
 	uadmin.RootURL = "/admin/"
+	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))
 	http.HandleFunc("/", uadmin.Handler(views.MainHandler))
 	http.HandleFunc("/login/", uadmin.Handler(views.LoginHandler))
 	http.HandleFunc("/logout/", uadmin.Handler(views.LogoutHandler))
