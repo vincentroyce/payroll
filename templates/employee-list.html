@@ -50,46 +50,62 @@
       <h2 id="pi">Personal Information</h2>
       
       <form id="regform" action="/action_page.php" method="post">
+      <div class="per-info">
         <div class="empModal-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" >
+        </div>
+        <div class="empModal-form">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" >
+        </div>
+        <div class="empModal-form">
+            <label for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" >
+        </div>
+        <div class="empModal-form">
+            <label for="sname">Suffix Name:</label>
+            <input type="text" id="sname" name="sname" >
         </div>
         <div class="empModal-form">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" >
         </div>
         <div class="empModal-form">
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="0000-000-0000" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="0000-000-0000" >
         </div>
         <div class="empModal-form"> 
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
+            <input type="text" id="address" name="address" >
         </div>
         <div class="empModal-form">
           <label for="birthDate">Birthday:</label>
-          <input type="date" id="birthDate" name="birthDate" required>
+          <input type="date" id="birthDate" name="birthDate" >
         </div>
         <div class="empModal-form">
           <label for="marital">Marital Status:</label>
-          <input type="text" id="marital" name="marital" required>
+          <input type="text" id="marital" name="marital" >
         </div>
+      </div>    
+      <div class="gov-id">
         <div class="empModal-form">
           <label for="sss">SSS:</label>
-          <input type="text" id="sss" name="sss" required>
+          <input type="text" id="sss" name="sss" >
         </div>
         <div class="empModal-form">
           <label for="philhealth">PhilHealth:</label>
-          <input type="text" id="philhealth" name="philhealth" required>
+          <input type="text" id="philhealth" name="philhealth" >
         </div>
         <div class="empModal-form">
           <label for="pagibig">Pag-Ibig:</label>
-          <input type="text" id="pagibig" name="pagibig" required>
+          <input type="text" id="pagibig" name="pagibig" >
         </div>
         <div class="empModal-form">
           <label for="tin">Tin ID:</label>
-          <input type="text" id="tin" name="tin" required>
+          <input type="text" id="tin" name="tin" >
         </div>
+      </div>
       </div>
       
       <div class="tab">

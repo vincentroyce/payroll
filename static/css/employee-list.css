@@ -90,7 +90,6 @@ td:last-child {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
 }
 
 /* Modal Content/Box */
@@ -98,7 +97,7 @@ td:last-child {
   background-image: url('/static/assets/img/integritynet-logo.png') ;
   background-repeat: no-repeat;
   background-color: #f6f6f6;
-  background-position: 50% 35px;
+  background-position: 50% 45px;
   margin-left: 25%;
   padding: 20px;
   border: 1px  solid #888;
@@ -157,7 +156,7 @@ td:last-child {
 #beif {
 
   text-align: center;
-  margin: 60px 0px 20px 0px;
+  margin: 70px 0px 20px 0px;
 }
 
 #pi, #ji, #ECI {
@@ -188,6 +187,28 @@ td:last-child {
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #ff0101;
+}
+
+.per-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.per-info input {
+  width: 25rem;
+}
+
+.gov-id {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gov-id input {
+  width: 25rem;
 }
 
 /* button {
