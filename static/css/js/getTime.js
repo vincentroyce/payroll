@@ -5,45 +5,57 @@ let time = new Date();
 let hour = time.getHours();
 let minute = time.getMinutes();
 let seconds = time.getSeconds();
+let date = time.getDate()
 if (hour > 12) {
     hour -= 12;
 }
-if (minute < 10) {
-    minute = `0${time.getMinutes()}` 
+if (hour == 0) {
+    hour = 12;
 }
 if (hour < 10) {
     hour = `0${hour}` 
 }
+if (minute < 10) {
+    minute = `0${time.getMinutes()}` 
+}
 if (seconds < 10) {
     seconds = `0${time.getSeconds()}`
 }
-if (time.getHours > 11) {
-    dateText.textContent =`0${time.getDate()} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}AM`;
+if (date < 10) {
+    date = `0${time.getDate()}`
+}
+if (time.getHours() < 12) {
+    dateText.textContent =`${date} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}AM`;
 } else {
-    dateText.textContent =`0${time.getDate()} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}PM`;
+    dateText.textContent =`${date} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}PM`;
 }
 setInterval(function() {
     time = new Date();
     hour = time.getHours();
     minute = time.getMinutes();
     seconds = time.getSeconds();
+
     if (hour > 12) {
         hour -= 12;
     }
-    if (minute < 10) {
-        minute = `0${time.getMinutes()}` 
+    if (hour == 0) {
+        hour = 12;
     }
     if (hour < 10) {
         hour = `0${hour}` 
     }
+    if (minute < 10) {
+        minute = `0${time.getMinutes()}` 
+    }
     if (seconds < 10) {
         seconds = `0${time.getSeconds()}`
     }
-    if (time.getHours > 11) {
-        dateText.textContent =`0${time.getDate()} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}AM`;
+    if (date < 10) {
+        date = `0${time.getDate()}`
+    }
+    if (time.getHours() < 12) {
+        dateText.textContent =`${date} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}AM`;
     } else {
-        dateText.textContent =`0${time.getDate()} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}PM`;
+        dateText.textContent =`${date} ${months[time.getMonth()]}, ${time.getFullYear()} ${hour}:${minute}:${seconds}PM`;
     }
 },1000)
-
-
