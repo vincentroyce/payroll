@@ -49,7 +49,7 @@
       <h1 id="beif">Basic Employment Information Form</h1>
       <h2 id="pi">Personal Information</h2>
       
-      <form id="regform" action="/action_page.php" method="post">
+      <form id="regform" action="" method="post">
       <div class="per-info">
         <div class="empModal-form">
             <label for="lname">Last Name:</label>
@@ -73,7 +73,7 @@
         </div>
         <div class="empModal-form">
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="0000-000-0000" >
+            <input type="number" id="phone" name="phone"  >
         </div>
         <div class="empModal-form"> 
             <label for="address">Address:</label>
@@ -139,7 +139,7 @@
         </div>
         <div class="empModal-form">
             <label for="salary">Salary:</label>
-            <input type="number" id="salary" name="ssalary" required>
+            <input type="number" id="salary" name="salary" placeholder="₱" required>
         </div>
         <div class="empModal-form">
             <label for="startDate">Start Date:</label>
@@ -154,12 +154,8 @@
           <input type="text" id="contactname" name="contactname" required>
         </div>
         <div class="empModal-form">
-          <label for="contactaddress">Full Name:</label>
-          <input type="text" id="contactaddress" name="contactaddress" required>
-        </div>
-        <div class="empModal-form">
           <label for="contactphone">Phone Number:</label>
-          <input type="tel" id="contactphone" name="contactphone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0000-000-0000" required>
+          <input type="number" id="contactphone" name="contactphone" required>
         </div>
         <div class="empModal-form">
           <label for="relationship">Relationship</label>
@@ -168,15 +164,15 @@
         <div class="empModal-form">
           <label for="notes">Notes:</label>
           <textarea id="notes" name="notes"></textarea>
+        </div class="submit">
+          <button type="submit" class="btn1">Submit</button>
         </div>
-        <button type="submit" class="btn">Submit</button>
-        </div>
-        <div style="overflow:auto;">
-          <div style="float:right;">
+
+          <div class="buttons">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
             <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-          </div>
-        </div>
+          </div>  
+          
     </form>
     </div>
   </div>
