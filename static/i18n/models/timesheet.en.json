@@ -42,6 +42,13 @@
       "pattern_msg": "",
       "err_msg": {},
       "Choices": {}
+    },
+    "Username": {
+      "display_name": "Username",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
     }
   }
 }

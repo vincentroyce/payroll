@@ -11,7 +11,7 @@ import (
 
 func main() {
 	uadmin.Register(
-		models.Company{},
+		//models.Company{},
 		models.Employee{},
 		models.Allowances{},
 		models.Benefit{},

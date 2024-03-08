@@ -5,8 +5,8 @@ import "github.com/uadmin/uadmin"
 type Department struct {
 	uadmin.Model
 	Name        string
-	WorkSite    string
-	WorkSitesID uint
+	WorkSite    WorkSite
+	WorkSiteID  uint
 	Managedby   string
 	ManagedbyID uint
 	// IsCostCenter string
