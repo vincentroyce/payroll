@@ -4,7 +4,7 @@ import "github.com/uadmin/uadmin"
 
 type Employee struct {
 	uadmin.Model
-
+	IdNumber  string
 	FirstName string
 	LastName  string
 	Password  string `uadmin:"password"`
@@ -18,7 +18,7 @@ type Employee struct {
 	ContactNumber string
 	Email         string `uadmin:"list_exclude"`
 	Status        Status `uadmin:"list_exclude"`
-	Username      string
+	Supervisor    bool   `uadmin:"list_exclude"`
 }
 
 type Gender int
@@ -50,11 +50,11 @@ func (s *Employee) String() string {
 
 func (e *Employee) Save() {
 	user := uadmin.User{}
-	user.Username = e.Username
+	user.Username = e.IdNumber
 	user.FirstName = e.FirstName
 	user.LastName = e.LastName
 	user.Password = e.Password
-	user.Email = e.Username
+	//user.Email = e.Username
 	//e.UserID = e.Username
 	user.Active = true
 	user.Save()

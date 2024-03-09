@@ -64,6 +64,20 @@
       "err_msg": {},
       "Choices": {}
     },
+    "IdNumber": {
+      "display_name": "Id Number",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "JobTitle": {
+      "display_name": "Job Title",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "LastName": {
       "display_name": "Last Name",
       "help": "",
@@ -94,6 +108,13 @@
     },
     "Status": {
       "display_name": "Status",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Supervisor": {
+      "display_name": "Supervisor",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},
