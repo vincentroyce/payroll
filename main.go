@@ -24,6 +24,7 @@ func main() {
 		models.ScheduleSlide{},
 		models.Timesheet{},
 		models.WorkSite{},
+		models.Position{},
 	)
 	uadmin.RootURL = "/admin/"
 	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))
