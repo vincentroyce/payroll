@@ -1,12 +1,12 @@
 /* EMPLOYEE LIST */
-/* #employeeList {
+#employeeList {
   background-image: url('/static/assets/img/search.png');
-  width: 30rem;
+  width: 30rem; /* Full-width */
   height: 20px;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  margin-bottom: 12px;
-} */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  margin-bottom: 12px; /* Add some space below the input */
+}
 
 #employee-table {
   border-collapse: collapse; /* Collapse borders */
@@ -37,13 +37,21 @@
   position: relative;
 }
 
-/* #add-emp {
-  padding: 2px;
-  background-color: green;
-  height: 30px;
-  margin-bottom: 12px;
-  color: #ddd;
-} */
+#add-emp {
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 300;
+  background-color: var(--good);
+  color: var(--white);
+  box-shadow: var(--shadow);
+  height: 40px;
+  cursor: pointer;
+}
+
+#add-emp:hover  {
+  background-color: var(--goodHover);
+  color: var(--secondaryDark);
+}
 
 .emplist-wrapper {
   width: 100%;
@@ -62,11 +70,11 @@
 }
 
 tr:nth-child(even).active {
-  background-color: #d3d3d3;
+  background-color: #aaa;
 }
 
 tr:nth-child(even) {
-  background-color: #fff6f6;
+  background-color: #FFF9F9;
 }
 
 th:last-child {
@@ -78,7 +86,25 @@ td:last-child {
 }
 
 .active {
-  background-color: #d3d3d3;
+  background-color: #aaa;
+}
+
+.edit {
+  background-image: url('/static/assets/img/edit.png');
+  background-size: cover; 
+  background-color: transparent;
+  padding: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.delete {
+  background-image: url('/static/assets/img/delete.png');
+  background-size: cover;    
+  background-color: transparent;        
+  padding: 1rem;
+  border: 0;
+  cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -86,8 +112,6 @@ td:last-child {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
 }
@@ -96,7 +120,7 @@ td:last-child {
 .empModal-content {
   background-image: url('/static/assets/img/integritynet-logo.png') ;
   background-repeat: no-repeat;
-  background-color: #f6f6f6;
+  background-color: #FFF9F9;
   background-position: 50% 45px;
   margin-left: 25%;
   padding: 20px;
@@ -104,16 +128,29 @@ td:last-child {
   width: 50%; /* Could be more or less, depending on screen size */
 }
 
+.employee-name {
+  color: #E40813;
+  cursor: pointer;
+}
+
+.employee-name:hover {
+  color: #FF7062;
+  cursor: pointer;
+}
+
 /* The Close Button */
-.close {
+.close,
+.close1, 
+.close2{
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, 
+.close1:hover, 
+.close2:hover  {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -174,12 +211,15 @@ td:last-child {
 }
 
 #beif {
-
   text-align: center;
   margin: 70px 0px 20px 0px;
 }
 
-#pi, #ji, #ECI {
+#pi {
+  margin: 0px 0px 20px 0px;
+}
+
+#ji, #ECI {
   margin: 70px 0px 20px 0px;
 }
 
@@ -192,7 +232,7 @@ td:last-child {
   width: 20px;
   margin-left: 12rem;
   padding: 5px;
-  background-color: #bbbbbb;
+  background-color: #ff0101;
   border: none;
   border-radius: 50%;
   display: inline-block;
@@ -202,11 +242,6 @@ td:last-child {
 /* Mark the active step: */
 .step.active {
   opacity: 10;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #ff0101;
 }
 
 .per-info {
@@ -231,4 +266,41 @@ td:last-child {
   width: 25rem;
 }
 
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+.modal-content1 {
+  background-image: url('/static/assets/img/integritynet-logo.png') ;
+  background-repeat: no-repeat;
+  background-color: #FFF9F9;
+  background-position: 50% 45px;
+  margin-left: 25%;
+  padding: 50px;
+  border: 1px  solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+.modal-content2 {
+  background-image: url('/static/assets/img/integritynet-logo.png') ;
+  background-repeat: no-repeat;
+  background-color: #FFF9F9;
+  background-position: 50% 45px;
+  margin-left: 25%;
+  padding: 50px;
+  border: 1px  solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}
 /* EMPLOYEE LIST */

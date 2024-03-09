@@ -26,10 +26,12 @@
         <tr class="employee-content">
           <td><input class="select" type="checkbox" value="Edit"></td>
           <td>{{.IdNumber}}</td>
-          <td>{{.LastName}}, {{.FirstName}}</td>
+          <td class="employee-name">{{.LastName}}, {{.FirstName}}</td>
           <td>{{.Company.Worksite}}</td>
           <td>{{.Department.Name}}</td>
           <td>{{.ContactNumber}}</td>
+          <td><button id="edit" class="edit"></button></td>
+          <td><button id="delete" class="delete"></button></td>
         </tr>
         {{end}}
       </table>
@@ -191,6 +193,21 @@
     </form>
     </div>
   </div>
+  <div id="modal1" class="modal1">
+
+    <div class="modal-content1">
+      <span class="close1">&times;</span>
+      <p>Edit page</p>
+    </div>
+  </div>
+  <div id="modal2" class="modal2">
+
+    <div class="modal-content2">
+      <span class="close2">&times;</span>
+      <p id="detail"></p>
+    </div>
+  </div>
+</div>
 </main>
 
 {{end}}

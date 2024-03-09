@@ -40,8 +40,10 @@ window.onclick = function (e) {
 
 
 let loadFile = function (event) {
-  let picture = document.querySelector('#main-profile')
-  picture.src = URL.createObjectURL(event.target.files[0]);
+  let picture = document.querySelectorAll('#main-profile')
+  picture.forEach(e => {
+    e.src = URL.createObjectURL(event.target.files[0]);
+  });  
 };
 
 

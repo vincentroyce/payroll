@@ -32,11 +32,10 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").style.display = "none"; // Hide the next button
-    document.getElementById("submitBtn").style.display = "inline"; // Display the submit button
+    
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
     document.getElementById("nextBtn").style.display = "inline"; // Show the next button
-    document.getElementById("submitBtn").style.display = "none"; // Hide the submit button
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
@@ -62,7 +61,6 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-  
   return true; 
 }
 
@@ -75,3 +73,40 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";  
 }
+
+//edit button modal
+var modal2 = document.getElementById("modal1");
+
+var btn1 = document.querySelectorAll("#edit");
+
+var span1 = document.getElementsByClassName("close1")[0];
+
+btn1.forEach(function(a) {
+    
+  a.addEventListener('click', function() {
+      
+      modal2.style.display = "block";
+  });
+});
+
+span1.onclick = function () {
+  modal2.style.display = "none"
+}
+
+var modal3 = document.getElementById("modal2");
+
+var span2 = document.getElementsByClassName("close2")[0];
+
+var employeeNames = document.querySelectorAll('.employee-name');
+
+employeeNames.forEach(function(e) {
+    
+    e.addEventListener('click', function() {
+        
+        modal3.style.display = "block";
+    });
+});
+
+span2.onclick = function () {
+  modal3.style.display = "none"
+} 
