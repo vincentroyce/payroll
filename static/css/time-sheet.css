@@ -1,13 +1,13 @@
 /* TIME SHEET*/
-#employee-timesheet {
-  background-image: url("payroll/static/assets/img/search.png"); /* Add a search icon to input */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 30rem; /* Full-width */
+/* #employee-timesheet {
+  background-image: url("payroll/static/assets/img/search.png");
+  background-repeat: no-repeat;
+  width: 30rem;
   height: 20px;
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  margin-bottom: 12px; /* Add some space below the input */
-}
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
+} */
 
 #timesheet {
   border-collapse: collapse; /* Collapse borders */
@@ -34,6 +34,7 @@
   width: 100%;
   height: 70px;
   display: flex;
+  padding-bottom: 1rem;
   justify-content: space-between;
 }
 
