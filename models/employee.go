@@ -12,13 +12,15 @@ type Employee struct {
 	Password  string `uadmin:"password;list_exclude"`
 	//Position string
 	// Company
-	Gender        Gender `uadmin:"list_exclude"`
-	Company       WorkSite
-	CompanyID     uint
-	Department    Department
-	DepartmentID  uint
-	JobTitle      Position
-	JobTitleID    uint
+	Gender       Gender `uadmin:"list_exclude"`
+	Company      WorkSite
+	CompanyID    uint
+	Department   Department
+	DepartmentID uint
+	JobTitle     Position
+	JobTitleID   uint
+	CivilStatus  CivilStatus
+
 	ContactNumber string
 	Email         string `uadmin:"list_exclude"`
 	Status        Status `uadmin:"list_exclude"`
@@ -60,4 +62,19 @@ func (Status) Probationary() int {
 }
 func (Status) Regular() int {
 	return 3
+}
+
+type CivilStatus int
+
+func (CivilStatus) Single() int {
+	return 1
+}
+func (CivilStatus) Married() int {
+	return 2
+}
+func (CivilStatus) Widowed() int {
+	return 3
+}
+func (CivilStatus) Seperated() int {
+	return 4
 }

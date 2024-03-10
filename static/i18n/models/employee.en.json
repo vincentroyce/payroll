@@ -1,6 +1,13 @@
 {
   "display_name": "Employee",
   "fields": {
+    "CivilStatus": {
+      "display_name": "Civil Status",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "Company": {
       "display_name": "Company",
       "help": "",
