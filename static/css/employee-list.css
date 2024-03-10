@@ -290,7 +290,6 @@ td:last-child {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
 }
 
 .modal-content2 {
@@ -298,9 +297,29 @@ td:last-child {
   background-repeat: no-repeat;
   background-color: #FFF9F9;
   background-position: 50% 45px;
+  display: flex;
+  flex-direction: column;
   margin-left: 25%;
   padding: 50px;
   border: 1px  solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
 }
+
+.perDetail-info,
+.govDetail-id,
+.emergDetail-info,
+.jobDetail-info,
+.modal-content2 {
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap to the next row */
+}
+
+.empDetail-form {
+  flex: 0 0 calc(50% - 10px); /* Make each form item take up 50% of the container width with some spacing */
+  margin-right: 10px; /* Adjust the spacing between form items */
+  margin-bottom: 10px;
+}
+
+
+
 /* EMPLOYEE LIST */
