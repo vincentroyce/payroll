@@ -142,6 +142,7 @@ td:last-child {
 .close,
 .close1, 
 .close2{
+  text-align: right;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -164,6 +165,7 @@ td:last-child {
   display: block;
   margin-bottom: 5px;
 }
+
 .empModal-form input,
 .empModal-form select,
 .empModal-form textarea {
@@ -174,6 +176,16 @@ td:last-child {
   box-sizing: border-box;
   opacity: 0.5;
 }
+
+.empModal-form #marital {
+  width: 25rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+
 .empModal-form textarea {
   resize: vertical;
   min-height: 100px;
@@ -208,6 +220,7 @@ td:last-child {
 }
 #prevBtn:hover, #nextBtn:hover {
   background-color: #45a049;
+
 }
 
 #beif {
@@ -320,6 +333,9 @@ td:last-child {
   margin-bottom: 10px;
 }
 
-
+.modal-content2 #pi, #ji, #ECI  {
+  color: #E40813;
+  margin-top: 3rem;
+}
 
 /* EMPLOYEE LIST */

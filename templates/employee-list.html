@@ -87,16 +87,15 @@
         </div>
         <div class="empModal-form">
           <label for="marital">Marital Status:</label>
-          <select id="marital" name="marital">
+          <select id="marital" name="marital" required>
               <option value="0">Select Status</option>
               <option value="1">Single</option>
               <option value="2">Married</option>
               <option value="3">Widowed</option>
               <option value="4">Seperated</option>
-             
-
             </select>
         </div>
+        
       </div>    
       <div class="gov-id">
         <div class="empModal-form">
@@ -122,7 +121,7 @@
       <h2 id="ji">Job Information</h2>
         <div class="empModal-form">
             <label for="department">Department:</label>
-            <select id="department" name="department">
+            <select id="department" name="department" required>
                 <option value="">Select Department</option>
                 {{range .Department}}
                   <option value="{{.ID}}">{{.Name}}</option>
@@ -131,11 +130,11 @@
         </div>
         <div class="empModal-form">
           <label for="branch">Branch:</label>
-          <input type="text" id="branch" name="branch">
+          <input type="text" id="branch" name="branch" required>
         </div>
         <div class="empModal-form">
           <label for="supervisor">Supervisor:</label>
-            <select id="supervisor" name="supervisor">
+            <select id="supervisor" name="supervisor" required>
               <option value="0">Select Supervisor</option>
               {{range .Employee}}
                 {{if eq .Supervisor true}}
@@ -146,7 +145,7 @@
         </div>
         <div class="empModal-form">
             <label for="position">Position:</label>
-            <select id="position" name="position">
+            <select id="position" name="position" required>
               <option value="0">Select Position</option>
               {{range .Position}}
                 <option value="{{.ID}}">{{.Name}}</option>
@@ -155,11 +154,11 @@
         </div>
         <div class="empModal-form">
             <label for="salary">Salary:</label>
-            <input type="number" id="salary" name="salary" placeholder="₱">
+            <input type="number" id="salary" name="salary" placeholder="₱" required>
         </div>
         <div class="empModal-form">
             <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" name="startDate">
+            <input type="date" id="startDate" name="startDate" required>
         </div>
       </div>
       
@@ -167,15 +166,15 @@
       <h2 id="ECI">Emergency Contact Information</h2>
         <div class="empModal-form">
           <label for="contactname">Full Name:</label>
-          <input type="text" id="contactname" name="contactname">
+          <input type="text" id="contactname" name="contactname" required>
         </div>
         <div class="empModal-form">
           <label for="contactphone">Phone Number:</label>
-          <input type="number" id="contactphone" name="contactphone">
+          <input type="number" id="contactphone" name="contactphone" required>
         </div>
         <div class="empModal-form">
           <label for="relationship">Relationship</label>
-          <input type="text" id="relationship" name="relationship">
+          <input type="text" id="relationship" name="relationship" required>
         </div>
         <div class="empModal-form">
           <label for="notes">Notes:</label>
