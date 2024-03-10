@@ -148,10 +148,9 @@
             <label for="position">Position:</label>
             <select id="position" name="position" required>
               <option value="0">Select Position</option>
-
-                 
-                <option value="1">test static</option>
-
+              {{range .Position}}
+                <option value="{{.ID}}">{{.Name}}</option>
+              {{end}}
             </select>
         </div>
         <div class="empModal-form">
