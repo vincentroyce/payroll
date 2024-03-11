@@ -11,7 +11,7 @@ type Employee struct {
 	MiddleName string `uadmin:"list_exclude"`
 	LastName   string `uadmin:"list_exclude"`
 	SuffixName string `uadmin:"list_exclude"`
-	// Password   string `uadmin:"password;list_exclude"`
+	Password   string `uadmin:"password;list_exclude"`
 
 	Gender       Gender `uadmin:"list_exclude"`
 	Address      string `uadmin:"html"`
