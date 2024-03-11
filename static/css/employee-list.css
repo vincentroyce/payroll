@@ -1,13 +1,4 @@
 /* EMPLOYEE LIST */
-#employeeList {
-  background-image: url('/static/assets/img/search.png');
-  width: 30rem; /* Full-width */
-  height: 20px;
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
 #employee-table {
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
@@ -35,22 +26,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-}
-
-#add-emp {
-  padding: 0.5rem;
-  cursor: pointer;
-  font-weight: 300;
-  background-color: var(--good);
-  color: var(--white);
-  box-shadow: var(--shadow);
-  height: 40px;
-  cursor: pointer;
-}
-
-#add-emp:hover  {
-  background-color: var(--goodHover);
-  color: var(--secondaryDark);
 }
 
 .emplist-wrapper {
