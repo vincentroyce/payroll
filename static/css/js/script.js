@@ -143,7 +143,24 @@ function timesheetfunction() {
 //     }
 //   }
 // }
-
+//Delete Employee AJAX for Delete API
+$(".delete-employee").on("submit", function(e) {
+  let ids = [];
+  tableContent.forEach(value => {
+    if (value.classList.contains('active')) {
+      ids.push(value.children[1].textContent);
+    } 
+  })
+  ids = ids.toString()
+  console.log(typeof ids);
+  $.ajax({
+    url: "/api/delete-employee/",
+    method: "POST",
+    data: {
+      ID: ids,
+    },
+  })
+})
 
 function payrollFunction() {
   let input = document.getElementById('payroll').value

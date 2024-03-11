@@ -13,7 +13,7 @@ func LoginAPIHandler(w http.ResponseWriter, r *http.Request) {
 	uadmin.Trail(uadmin.DEBUG, "username api: ", username)
 	uadmin.Trail(uadmin.DEBUG, "password api: ", password)
 	login := []models.Employee{}
-	uadmin.Filter(&login, "username = ? AND password = ?", username, password)
+	uadmin.Filter(&login, "id_number = ? AND password = ?", username, password)
 	for i := range login {
 		uadmin.Preload(&login[i])
 	}
