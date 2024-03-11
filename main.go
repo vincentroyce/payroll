@@ -27,6 +27,7 @@ func main() {
 		models.Position{},
 	)
 	uadmin.RootURL = "/admin/"
+	http.HandleFunc("/api/delete-employee/", uadmin.Handler(api.DeleteEmployeeAPIHandler))
 	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))
 	http.HandleFunc("/", uadmin.Handler(views.MainHandler))
 	http.HandleFunc("/login/", uadmin.Handler(views.LoginHandler))
