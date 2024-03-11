@@ -4,22 +4,24 @@ import "github.com/uadmin/uadmin"
 
 type Employee struct {
 	uadmin.Model
-	User      uadmin.User
-	UserID    uint
-	IdNumber  string
-	FirstName string `uadmin:"list_exclude"`
-	LastName  string `uadmin:"list_exclude"`
-	Password  string `uadmin:"password;list_exclude"`
-	//Position string
-	// Company
+	User       uadmin.User
+	UserID     uint
+	IdNumber   string
+	FirstName  string `uadmin:"list_exclude"`
+	MiddleName string `uadmin:"list_exclude"`
+	LastName   string `uadmin:"list_exclude"`
+	SuffixName string `uadmin:"list_exclude"`
+	// Password   string `uadmin:"password;list_exclude"`
+
 	Gender       Gender `uadmin:"list_exclude"`
+	Address      string `uadmin:"html"`
 	Company      WorkSite
 	CompanyID    uint
 	Department   Department
 	DepartmentID uint
 	JobTitle     Position
 	JobTitleID   uint
-	CivilStatus  CivilStatus
+	CivilStatus  CivilStatus `uadmin:"list_exclude"`
 
 	ContactNumber string
 	Email         string `uadmin:"list_exclude"`
@@ -27,12 +29,16 @@ type Employee struct {
 	Supervisor    bool   `uadmin:"list_exclude"`
 }
 
+func (s *Employee) String() string {
+	return s.LastName + ", " + s.FirstName + " " + s.MiddleName + " " + s.SuffixName
+}
+
 func (e *Employee) Save() {
 	user := uadmin.User{}
 	user.Username = e.IdNumber
 	user.FirstName = e.FirstName
 	user.LastName = e.LastName
-	user.Password = e.Password
+	user.Password = "Password11"
 	//user.Email = e.Username
 	//e.UserID = e.Username
 	user.Active = true

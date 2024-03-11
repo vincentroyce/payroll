@@ -29,6 +29,7 @@ func main() {
 	uadmin.RootURL = "/admin/"
 	http.HandleFunc("/api/delete-employee/", uadmin.Handler(api.DeleteEmployeeAPIHandler))
 	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))
+	http.HandleFunc("/api/add-employee/", uadmin.Handler(api.AddEmployeeAPIHandler))
 	http.HandleFunc("/", uadmin.Handler(views.MainHandler))
 	http.HandleFunc("/login/", uadmin.Handler(views.LoginHandler))
 	http.HandleFunc("/logout/", uadmin.Handler(views.LogoutHandler))

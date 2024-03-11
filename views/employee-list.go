@@ -14,6 +14,7 @@ func EmployeeListHandler(w http.ResponseWriter, r *http.Request) map[string]inte
 	employee := []models.Employee{}
 	department := []models.Department{}
 	position := []models.Position{}
+	worksite := []models.WorkSite{}
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
 
 	uadmin.All(&employee)
@@ -35,6 +36,11 @@ func EmployeeListHandler(w http.ResponseWriter, r *http.Request) map[string]inte
 	}
 	c["Position"] = position
 
+	uadmin.All(&worksite)
+	for x := range worksite {
+		uadmin.Preload(&worksite[x])
+	}
+	c["Worksite"] = worksite
 	// tells the handler that it will load to this path
 	r.URL.Path = strings.TrimPrefix(r.URL.Path, "/employee-list")
 	return c

@@ -177,3 +177,30 @@ function payrollFunction() {
   }
 }
 
+
+
+$("#regform").on("submit", function(e) {
+  let employeeFName = document.getElementById('fname').value
+  let employeeLName = document.getElementById('lname').value
+  let employeeWorksite = document.getElementById('worksite').value
+  let employeeContact = document.getElementById('contactphone').value
+  // let employeeIdNumber = document.getElementById('id').value
+  $.ajax({
+    url: "/api/add-employee/",
+    method: "POST",
+    data: {
+      fname: employeeFName,
+      lname: employeeLName,
+      worksite: employeeWorksite,
+      contactphone: employeeContact,
+
+
+     // IdNumber: employeeIdNumber,
+    },
+  })
+  console.log(employeeFName)
+  console.log(employeeLName)
+  console.log(employeeWorksite)
+  console.log(employeeContact)
+
+})

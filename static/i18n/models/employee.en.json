@@ -1,6 +1,13 @@
 {
   "display_name": "Employee",
   "fields": {
+    "Address": {
+      "display_name": "Address",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "CivilStatus": {
       "display_name": "Civil Status",
       "help": "",
@@ -92,6 +99,13 @@
       "err_msg": {},
       "Choices": {}
     },
+    "MiddleName": {
+      "display_name": "Middle Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "Name": {
       "display_name": "Name",
       "help": "",
@@ -115,6 +129,13 @@
     },
     "Status": {
       "display_name": "Status",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "SuffixName": {
+      "display_name": "Suffix Name",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},
