@@ -185,6 +185,7 @@ $("#regform").on("submit", function(e) {
   let employeeWorksite = document.getElementById('worksite').value
   let employeeContact = document.getElementById('contactphone').value
   // let employeeIdNumber = document.getElementById('id').value
+  let employeeDepartment = document.getElementById('department').value
   $.ajax({
     url: "/api/add-employee/",
     method: "POST",
@@ -193,7 +194,7 @@ $("#regform").on("submit", function(e) {
       lname: employeeLName,
       worksite: employeeWorksite,
       contactphone: employeeContact,
-
+      department: employeeDepartment,
 
      // IdNumber: employeeIdNumber,
     },

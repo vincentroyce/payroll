@@ -14,7 +14,7 @@ func EmployeeListHandler(w http.ResponseWriter, r *http.Request) map[string]inte
 	employee := []models.Employee{}
 	department := []models.Department{}
 	position := []models.Position{}
-	worksite := []models.WorkSite{}
+	worksite := []models.Worksite{}
 	// Initialize Title and mapped it on the html file (you can check it if you want :)
 
 	uadmin.All(&employee)

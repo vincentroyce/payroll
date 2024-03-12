@@ -1,6 +1,13 @@
 {
   "display_name": "Department",
   "fields": {
+    "EmployeeID": {
+      "display_name": "Employee ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
     "ID": {
       "display_name": "ID",
       "help": "",
@@ -38,6 +45,13 @@
     },
     "WorkSitesID": {
       "display_name": "Work Sites ID",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Worksite": {
+      "display_name": "Worksite",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},

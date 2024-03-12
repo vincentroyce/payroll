@@ -15,12 +15,12 @@ type Employee struct {
 
 	Gender       Gender `uadmin:"list_exclude"`
 	Address      string `uadmin:"html"`
-	Company      WorkSite
-	CompanyID    uint
+	Worksite     Worksite
+	WorksiteID   uint
 	Department   Department
 	DepartmentID uint
-	JobTitle     Position
-	JobTitleID   uint
+	Position     Position
+	PositionID   uint
 	CivilStatus  CivilStatus `uadmin:"list_exclude"`
 
 	ContactNumber string
@@ -43,6 +43,9 @@ func (e *Employee) Save() {
 	//e.UserID = e.Username
 	user.Active = true
 
+
+
+	
 	user.Save()
 	uadmin.Save(e)
 }

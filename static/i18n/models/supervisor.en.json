@@ -1,8 +1,15 @@
 {
-  "display_name": "Worksite",
+  "display_name": "Supervisor",
   "fields": {
-    "EmployeeID": {
-      "display_name": "Employee ID",
+    "Department": {
+      "display_name": "Department",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Employee": {
+      "display_name": "Employee",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},
@@ -15,8 +22,15 @@
       "err_msg": {},
       "Choices": {}
     },
-    "ManagedBy": {
-      "display_name": "Managed By",
+    "Name": {
+      "display_name": "Name",
+      "help": "",
+      "pattern_msg": "",
+      "err_msg": {},
+      "Choices": {}
+    },
+    "Position": {
+      "display_name": "Position",
       "help": "",
       "pattern_msg": "",
       "err_msg": {},

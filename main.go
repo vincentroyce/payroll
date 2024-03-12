@@ -23,9 +23,48 @@ func main() {
 		models.Overtime{},
 		models.ScheduleSlide{},
 		models.Timesheet{},
-		models.WorkSite{},
+		models.Worksite{},
 		models.Position{},
+		models.Supervisor{},
 	)
+	// uadmin.RegisterInlines(
+	// 	models.Employee{},
+	// 	map[string]string{
+	// 		"Department": "EmployeeID",
+	// 	},
+	// )
+	uadmin.RegisterInlines(
+		models.Employee{},
+		map[string]string{
+			"Supervisor": "EmployeeID",
+		},
+	)
+	uadmin.RegisterInlines(
+		models.Department{},
+		map[string]string{
+			"Employee": "DepartmentID",
+		},
+	)
+	uadmin.RegisterInlines(
+		models.Position{},
+		map[string]string{
+			"Employee":   "PositionID",
+			"Supervisor": "PositionID",
+		},
+	)
+	uadmin.RegisterInlines(
+		models.Worksite{},
+		map[string]string{
+			"Department": "WorksiteID",
+			"Supervisor": "WorksiteID",
+		},
+	)
+
+	// uadmin.RegisterInlines(
+	// 	models.Employee{},
+	// 	map[string]string{
+	// 		"Department": "EmployeeID",
+	// 	})
 	uadmin.RootURL = "/admin/"
 	http.HandleFunc("/api/delete-employee/", uadmin.Handler(api.DeleteEmployeeAPIHandler))
 	http.HandleFunc("/api/dashboard/", uadmin.Handler(api.LoginAPIHandler))

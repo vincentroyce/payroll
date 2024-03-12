@@ -2,6 +2,7 @@ package api
 
 import (
 	"net/http"
+	"strconv"
 
 	"github.com/uadmin/uadmin"
 	"github.com/vincentroyce/payroll/models"
@@ -13,17 +14,18 @@ func AddEmployeeAPIHandler(w http.ResponseWriter, r *http.Request) {
 
 	employeeFName := r.FormValue("fname")
 	employeeLName := r.FormValue("lname")
-	employeeWorksite := r.FormValue("worksite")
-	//employeeDepartment := strconv.Atoi(r.FormValue("department"))
+	employeeWorksite, _ := strconv.ParseUint(r.FormValue("worksite"), 10, 64)
+	employeeDepartment, _ := strconv.ParseUint(r.FormValue("department"), 10, 64)
 	employeeContact := r.FormValue("contactphone")
 	uadmin.Trail(uadmin.DEBUG, employeeFName)
 
 	emp.FirstName = employeeFName
 	emp.LastName = employeeLName
-	emp.Company.Worksite = employeeWorksite
-	//emp.Department = employeeDepartment
+	emp.WorksiteID = uint(employeeWorksite)
+	emp.DepartmentID = uint(employeeDepartment)
 	emp.ContactNumber = employeeContact
-
+	uadmin.Trail(uadmin.DEBUG, "worksite :", employeeDepartment)
+	uadmin.Trail(uadmin.DEBUG, "worksite :", emp.Department)
 	uadminUser.FirstName = employeeFName
 	uadminUser.LastName = employeeLName
 	uadminUser.Username = employeeFName

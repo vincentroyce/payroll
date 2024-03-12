@@ -4,5 +4,6 @@ import "github.com/uadmin/uadmin"
 
 type Benefit struct {
 	uadmin.Model
-	Name string
+	Name       string
+	Percentage float64
 }
